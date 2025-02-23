@@ -24,7 +24,7 @@ noButton.addEventListener("click", function () {
 
   // 2. 挤压NO按钮，每次右移50px，但不超过屏幕宽度的80%
   let noOffset = clickCount * 50;
-  let maxOffset = window.innerWidth * 0.8; // 最大移动距离为屏幕宽度的80%
+  let maxOffset = window.innerWidth - noButton.offsetWidth; // 最大移动距离为屏幕宽度减去按钮宽度
   noButton.style.transform = `translateX(${Math.min(noOffset, maxOffset)}px)`;
 
   // 3. 让图片和文字往上移动
