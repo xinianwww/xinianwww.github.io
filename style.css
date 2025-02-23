@@ -78,3 +78,44 @@ body {
     height: auto;
     margin-top: 20px; /* 增加上边距 */
   }
+  /* 基础样式 */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* 容器宽度为屏幕宽度的90% */
+  max-width: 600px; /* 最大宽度 */
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 按钮之间的间距 */
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+  .container {
+    width: 100%; /* 在小屏幕上占满宽度 */
+  }
+
+  button {
+    font-size: 16px; /* 缩小按钮字体 */
+    padding: 8px 16px; /* 缩小按钮内边距 */
+  }
+
+  #no {
+    white-space: nowrap; /* 防止按钮文字换行 */
+  }
+}
