@@ -22,9 +22,10 @@ noButton.addEventListener("click", function () {
   let yesSize = 1 + (clickCount * 1.2);
   yesButton.style.transform = `scale(${yesSize})`;
 
-  // 2. 挤压NO按钮，每次右移100px
+  // 2. 挤压NO按钮，每次右移50px，但不超过屏幕宽度的80%
   let noOffset = clickCount * 50;
-  noButton.style.transform = `translateX(${noOffset}px)`;
+  let maxOffset = window.innerWidth * 0.8; // 最大移动距离为屏幕宽度的80%
+  noButton.style.transform = `translateX(${Math.min(noOffset, maxOffset)}px)`;
 
   // 3. 让图片和文字往上移动
   let moveUp = clickCount * 25; // 每次上移20px
