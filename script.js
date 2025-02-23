@@ -38,11 +38,11 @@ noButton.addEventListener("click", function () {
   }
 
   // 5. 图片变化
-  if (clickCount === 1) mainImage.src = "images/kuku2.gif"; // 震惊
-  if (clickCount === 2) mainImage.src = "images/kuku3.gif"; // 思考
-  if (clickCount === 3) mainImage.src = "images/kuku4.gif"; // 生气
-  if (clickCount === 4) mainImage.src = "images/kuku5.gif"; // 哭
-  if (clickCount >= 5) mainImage.src = "images/kuku6.gif"; // 之后一直是哭
+  if (clickCount === 1) mainImage.src = "images/kuku2.png"; // 震惊
+  if (clickCount === 2) mainImage.src = "images/kuku3.png"; // 思考
+  if (clickCount === 3) mainImage.src = "images/kuku4.png"; // 生气
+  if (clickCount === 4) mainImage.src = "images/kuku5.png"; // 哭
+  if (clickCount >= 5) mainImage.src = "images/kuku6.png"; // 之后一直是哭
 });
 
 // Yes按钮点击后，进入表白成功页面
